@@ -149,7 +149,6 @@ def check_daily_change():
             checkpoints_account[3][1] = latest_value
 
 
-# Check stock-value difference in percentage. //Function being tested.
 def check_stock_difference():
     """
     This function checks stock-value difference in percentage.

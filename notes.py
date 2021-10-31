@@ -1,10 +1,9 @@
 """
 web-scraper:
--label stocks from config.py
--get_owned_stock_prices(): change 8 to len(stock_list)
+-label stocks from config.py as user settings.
 
 telegram-bot:
--market open and close for all markets, select in config.py
+-market open and close for all markets, select in config.py as user settings.
 -sort out yellow warnings.
 
 """

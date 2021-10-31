@@ -131,7 +131,7 @@ def get_owned_stock_prices():
     # Data to dataframe.
     df_stocks = pd.DataFrame(
         data={
-            # All (manually) labeled stocks.                          # note: will add this to config as settings later.
+            # All (manually) labeled stocks.
             'ABT': data_stock_values[0],
             'T': data_stock_values[1],
             'BRMK': data_stock_values[2],
@@ -145,7 +145,7 @@ def get_owned_stock_prices():
         columns=('ABT', 'T', 'BRMK', 'GNL', 'LXP', 'PLD', 'SPG', 'STAG', 'WY'),
         index=[0])
     # Remove collected (manually labeled) data from list.
-    for i in range(8):                                                                     # change 8 to len(stock_list)
+    for i in range(len(df_stocks.columns)):
         data_stock_values.pop(0)
     # If any values left in list, add to dataframe through dict as unlabeled(num).
     if data_stock_values:

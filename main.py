@@ -4,11 +4,6 @@ This script serves as the manager of both web_scraper.py and telegram_bot.py, I'
 them both through this script for two reasons. The first reason is to prevent runtime errors caused by web_scraper.py
 and telegram_bot.py simultaneously trying to interact with DN_database.csv. The second reason is to have my project
 properly organised and thereby 'readable' to classmates and teachers.
-
-Regarding self-development I'd say the most notable things I've learned during this project are:
--I've used 'Selenium' web-scraping to both learn about the subject and because 'Degiro' doesn't have an official API.
--I've been introduced to the 'Pandas' library, which I needed for saving and interacting with the collected data.
--I've learned how to interact with a telegram bot to stay up to date when running bot scripts.
 """
 # Resources
 import web_scraper as ws
@@ -51,6 +46,7 @@ if __name__ == '__main__':
         ws.time.sleep(config.function_interval)
         ws.site_navigation()
         ws.time.sleep(config.function_interval)
+        print('[navigation done, now collecting data.]')
     except():
         print('[runtime error] after web_scraper.py initialization.]\n'
               'timeout during or after login page, please retry.')
